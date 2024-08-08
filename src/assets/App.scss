@@ -40,18 +40,35 @@ body{
     position: absolute;
     top: 100px;
     left: 0;
-    z-index: 2; 
+    z-index: 3; 
     white-space: nowrap;
     text-decoration: underline;
     font-weight: 700;
     font-size: 20px;
     margin: 0;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
   }
+  .headerImageWrapper {
+    position: relative;
+    width: 200px; 
+  }
+  
   .headerImage {
+    width: 100%;
+    display: block;
+    position: relative;
     z-index: 1; 
-    margin-right: -15px;
-    opacity: 60%;
+  }
+  
+  .radialOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0), #dedcd698);
+    pointer-events: none;
+    z-index: 2;
   }
   
   @keyframes text-slide-in {
@@ -64,3 +81,54 @@ body{
       opacity: 1;
     }
   }
+
+  .navMargin{
+    margin-right: 10px;
+  }
+  .navMargin:hover{
+    text-decoration: underline;
+  }
+
+
+
+
+
+
+
+
+
+  
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    z-index: -1; 
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover; 
+    opacity: 0.3;
+    pointer-events: none; 
+  }
+  
+  .background-video iframe {
+    width: 100vw; 
+    height: 56.25vw; 
+    min-height: 100vh; 
+    min-width: 177.78vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; 
+  }
+  
